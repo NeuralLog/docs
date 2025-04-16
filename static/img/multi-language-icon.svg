@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Multi-Language Support</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#F6FFED" cx="60" cy="60" r="60"/>
+        <g transform="translate(20, 20)">
+            <!-- Code Window -->
+            <rect x="0" y="0" width="80" height="80" rx="4" fill="#FFFFFF" stroke="#52C41A" stroke-width="2"/>
+            <rect x="0" y="0" width="80" height="15" rx="4" fill="#52C41A"/>
+            <circle cx="7.5" cy="7.5" r="2.5" fill="#FFFFFF"/>
+            <circle cx="15" cy="7.5" r="2.5" fill="#FFFFFF"/>
+            <circle cx="22.5" cy="7.5" r="2.5" fill="#FFFFFF"/>
+            
+            <!-- TypeScript -->
+            <rect x="10" y="25" width="25" height="15" rx="2" fill="#52C41A" opacity="0.2"/>
+            <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#52C41A">
+                <tspan x="15" y="35">TS</tspan>
+            </text>
+            
+            <!-- Java -->
+            <rect x="45" y="25" width="25" height="15" rx="2" fill="#52C41A" opacity="0.2"/>
+            <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#52C41A">
+                <tspan x="50" y="35">Java</tspan>
+            </text>
+            
+            <!-- Python -->
+            <rect x="10" y="50" width="25" height="15" rx="2" fill="#52C41A" opacity="0.2"/>
+            <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#52C41A">
+                <tspan x="13" y="60">Py</tspan>
+            </text>
+            
+            <!-- C# -->
+            <rect x="45" y="50" width="25" height="15" rx="2" fill="#52C41A" opacity="0.2"/>
+            <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#52C41A">
+                <tspan x="50" y="60">C#</tspan>
+            </text>
+            
+            <!-- Code Lines -->
+            <line x1="10" y1="75" x2="70" y2="75" stroke="#52C41A" stroke-width="1" stroke-dasharray="2,2"/>
+            <line x1="10" y1="70" x2="50" y2="70" stroke="#52C41A" stroke-width="1" stroke-dasharray="2,2"/>
+            <line x1="10" y1="65" x2="60" y2="65" stroke="#52C41A" stroke-width="1" stroke-dasharray="2,2"/>
+        </g>
+    </g>
+</svg>

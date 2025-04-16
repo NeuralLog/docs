@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>AI Integration</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#F0F5FF" cx="60" cy="60" r="60"/>
+        <g transform="translate(20, 20)">
+            <!-- Brain -->
+            <path d="M40,0 C51.046,0 60,8.954 60,20 C60,24.418 58.418,28.472 55.777,31.667 C59.397,35.054 61.667,39.801 61.667,45 C61.667,50.199 59.397,54.946 55.777,58.333 C58.418,61.528 60,65.582 60,70 C60,81.046 51.046,90 40,90 C28.954,90 20,81.046 20,70 C20,65.582 21.582,61.528 24.223,58.333 C20.603,54.946 18.333,50.199 18.333,45 C18.333,39.801 20.603,35.054 24.223,31.667 C21.582,28.472 20,24.418 20,20 C20,8.954 28.954,0 40,0 Z" fill="#2F54EB" opacity="0.2"/>
+            
+            <!-- Neural Network -->
+            <circle fill="#2F54EB" cx="40" cy="15" r="5"/>
+            <circle fill="#2F54EB" cx="25" cy="30" r="5"/>
+            <circle fill="#2F54EB" cx="55" cy="30" r="5"/>
+            <circle fill="#2F54EB" cx="25" cy="60" r="5"/>
+            <circle fill="#2F54EB" cx="55" cy="60" r="5"/>
+            <circle fill="#2F54EB" cx="40" cy="75" r="5"/>
+            <circle fill="#2F54EB" cx="40" cy="45" r="5"/>
+            
+            <!-- Connections -->
+            <line x1="40" y1="20" x2="25" y2="25" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="40" y1="20" x2="55" y2="25" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="25" y1="35" x2="40" y2="40" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="55" y1="35" x2="40" y2="40" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="40" y1="50" x2="25" y2="55" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="40" y1="50" x2="55" y2="55" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="25" y1="65" x2="40" y2="70" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="55" y1="65" x2="40" y2="70" stroke="#2F54EB" stroke-width="2"/>
+            
+            <!-- Data Nodes -->
+            <rect x="10" y="40" width="10" height="10" rx="2" fill="#2F54EB"/>
+            <rect x="70" y="40" width="10" height="10" rx="2" fill="#2F54EB"/>
+            <line x1="20" y1="45" x2="25" y2="45" stroke="#2F54EB" stroke-width="2"/>
+            <line x1="70" y1="45" x2="55" y2="45" stroke="#2F54EB" stroke-width="2"/>
+        </g>
+    </g>
+</svg>

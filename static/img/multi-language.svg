@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Multi-Language Support</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(40, 40)">
+            <path d="M60,0 C93.137,0 120,26.863 120,60 C120,93.137 93.137,120 60,120 C26.863,120 0,93.137 0,60 C0,26.863 26.863,0 60,0 Z" fill="#F6FFED" fill-rule="nonzero"></path>
+            <path d="M30,30 L50,30 C52.761,30 55,32.239 55,35 L55,55 C55,57.761 52.761,60 50,60 L30,60 C27.239,60 25,57.761 25,55 L25,35 C25,32.239 27.239,30 30,30 Z" fill="#52C41A" fill-rule="nonzero"></path>
+            <path d="M70,30 L90,30 C92.761,30 95,32.239 95,35 L95,55 C95,57.761 92.761,60 90,60 L70,60 C67.239,60 65,57.761 65,55 L65,35 C65,32.239 67.239,30 70,30 Z" fill="#52C41A" fill-rule="nonzero"></path>
+            <path d="M30,70 L50,70 C52.761,70 55,72.239 55,75 L55,95 C55,97.761 52.761,100 50,100 L30,100 C27.239,100 25,97.761 25,95 L25,75 C25,72.239 27.239,70 30,70 Z" fill="#52C41A" fill-rule="nonzero"></path>
+            <path d="M70,70 L90,70 C92.761,70 95,72.239 95,75 L95,95 C95,97.761 92.761,100 90,100 L70,100 C67.239,100 65,97.761 65,95 L65,75 C65,72.239 67.239,70 70,70 Z" fill="#52C41A" fill-rule="nonzero"></path>
+            <text font-family="Arial-BoldMT, Arial" font-size="14" font-weight="bold" fill="#FFFFFF">
+                <tspan x="33" y="48">TS</tspan>
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="14" font-weight="bold" fill="#FFFFFF">
+                <tspan x="73" y="48">JS</tspan>
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="14" font-weight="bold" fill="#FFFFFF">
+                <tspan x="33" y="88">C#</tspan>
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="14" font-weight="bold" fill="#FFFFFF">
+                <tspan x="73" y="88">GO</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

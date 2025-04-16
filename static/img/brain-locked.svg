@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="400px" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Brain Locked</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Brain outline -->
+        <path d="M250,80 C310,80 350,140 350,200 C350,260 310,320 250,320 C190,320 150,260 150,200 C150,140 190,80 250,80 Z" fill="#2F54EB" opacity="0.1"></path>
+        
+        <!-- Brain details - simplified -->
+        <path d="M250,120 C290,120 310,160 310,200 C310,240 290,280 250,280 C210,280 190,240 190,200 C190,160 210,120 250,120 Z" stroke="#2F54EB" stroke-width="3"></path>
+        <path d="M190,180 C180,180 170,190 170,200 C170,210 180,220 190,220" stroke="#2F54EB" stroke-width="3"></path>
+        <path d="M310,180 C320,180 330,190 330,200 C330,210 320,220 310,220" stroke="#2F54EB" stroke-width="3"></path>
+        <path d="M230,120 C230,110 240,100 250,100 C260,100 270,110 270,120" stroke="#2F54EB" stroke-width="3"></path>
+        <path d="M230,280 C230,290 240,300 250,300 C260,300 270,290 270,280" stroke="#2F54EB" stroke-width="3"></path>
+        
+        <!-- No access symbol -->
+        <circle cx="250" cy="200" r="120" stroke="#FF4D4F" stroke-width="8" fill="none"></circle>
+        <line x1="160" y1="110" x2="340" y2="290" stroke="#FF4D4F" stroke-width="8"></line>
+        
+        <!-- Lock symbols -->
+        <g transform="translate(180, 150)">
+            <rect fill="#1677FF" x="0" y="10" width="40" height="30" rx="4"></rect>
+            <rect fill="#1677FF" x="10" y="0" width="20" height="15" rx="8"></rect>
+            <circle fill="#FFFFFF" cx="20" cy="25" r="5"></circle>
+        </g>
+        
+        <g transform="translate(280, 220)">
+            <rect fill="#1677FF" x="0" y="10" width="40" height="30" rx="4"></rect>
+            <rect fill="#1677FF" x="10" y="0" width="20" height="15" rx="8"></rect>
+            <circle fill="#FFFFFF" cx="20" cy="25" r="5"></circle>
+        </g>
+    </g>
+</svg>

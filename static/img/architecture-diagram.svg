@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-family: Arial, sans-serif;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .component {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .description {
+      font-size: 12px;
+    }
+    .arrow {
+      stroke: #333;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+    .secure {
+      fill: #4CAF50;
+    }
+    .client {
+      fill: #2196F3;
+    }
+    .server {
+      fill: #FF9800;
+    }
+    .box {
+      stroke: #333;
+      stroke-width: 2;
+      rx: 5;
+      ry: 5;
+    }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">NeuralLog Zero-Knowledge Architecture</text>
+  
+  <!-- Client Side -->
+  <rect x="50" y="80" width="300" height="250" fill="#E3F2FD" class="box" />
+  <text x="200" y="100" text-anchor="middle" class="component client">Client Application</text>
+  
+  <!-- Client Components -->
+  <rect x="80" y="120" width="240" height="60" fill="#BBDEFB" class="box" />
+  <text x="200" y="140" text-anchor="middle" class="component">NeuralLog Client SDK</text>
+  <text x="200" y="160" text-anchor="middle" class="description">Handles encryption and API communication</text>
+  
+  <rect x="80" y="200" width="100" height="60" fill="#90CAF9" class="box" />
+  <text x="130" y="220" text-anchor="middle" class="component">Key Manager</text>
+  <text x="130" y="240" text-anchor="middle" class="description">Manages encryption keys</text>
+  
+  <rect x="220" y="200" width="100" height="60" fill="#90CAF9" class="box" />
+  <text x="270" y="220" text-anchor="middle" class="component">Encryptor</text>
+  <text x="270" y="240" text-anchor="middle" class="description">Encrypts log data</text>
+  
+  <!-- Server Side -->
+  <rect x="450" y="80" width="300" height="250" fill="#FFF3E0" class="box" />
+  <text x="600" y="100" text-anchor="middle" class="component server">NeuralLog Server</text>
+  
+  <!-- Server Components -->
+  <rect x="480" y="120" width="240" height="60" fill="#FFE0B2" class="box" />
+  <text x="600" y="140" text-anchor="middle" class="component">API Gateway</text>
+  <text x="600" y="160" text-anchor="middle" class="description">Handles authentication and routing</text>
+  
+  <rect x="480" y="200" width="100" height="60" fill="#FFCC80" class="box" />
+  <text x="530" y="220" text-anchor="middle" class="component">Log Storage</text>
+  <text x="530" y="240" text-anchor="middle" class="description">Stores encrypted logs</text>
+  
+  <rect x="620" y="200" width="100" height="60" fill="#FFCC80" class="box" />
+  <text x="670" y="220" text-anchor="middle" class="component">MCP Service</text>
+  <text x="670" y="240" text-anchor="middle" class="description">AI integration</text>
+  
+  <!-- Arrows -->
+  <line x1="320" y1="150" x2="480" y2="150" class="arrow" />
+  <text x="400" y="140" text-anchor="middle" class="description secure">Encrypted Data</text>
+  
+  <line x1="180" y1="200" x2="220" y2="200" class="arrow" />
+  <text x="200" y="190" text-anchor="middle" class="description">Keys</text>
+  
+  <line x1="530" y1="180" x2="530" y2="200" class="arrow" />
+  <line x1="670" y1="180" x2="670" y2="200" class="arrow" />
+  
+  <!-- Legend -->
+  <rect x="300" y="350" width="200" height="30" fill="none" stroke="#333" />
+  <text x="400" y="370" text-anchor="middle" class="description secure">All data encrypted end-to-end</text>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Early Warning Signals</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(40, 40)">
+            <path d="M60,0 C93.137,0 120,26.863 120,60 C120,93.137 93.137,120 60,120 C26.863,120 0,93.137 0,60 C0,26.863 26.863,0 60,0 Z" fill="#FFF7E6" fill-rule="nonzero"></path>
+            <path d="M60,20 C61.105,20 62.105,20.595 62.658,21.552 L62.658,21.552 L95,80 C95.552,80.957 95.552,82.043 95,83 C94.447,83.957 93.447,84.552 92.342,84.552 L92.342,84.552 L27.658,84.552 C26.553,84.552 25.553,83.957 25,83 C24.448,82.043 24.448,80.957 25,80 L25,80 L57.342,21.552 C57.895,20.595 58.895,20 60,20 Z" fill="#FA8C16" fill-rule="nonzero"></path>
+            <path d="M60,35 C61.657,35 63,36.343 63,38 L63,38 L63,60 C63,61.657 61.657,63 60,63 C58.343,63 57,61.657 57,60 L57,60 L57,38 C57,36.343 58.343,35 60,35 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <circle fill="#FFFFFF" cx="60" cy="73" r="5"></circle>
+        </g>
+    </g>
+</svg>

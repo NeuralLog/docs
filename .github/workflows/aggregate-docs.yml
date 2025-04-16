@@ -1,0 +1,300 @@
+name: Aggregate Documentation
+
+on:
+  # Run daily at midnight
+  schedule:
+    - cron: '0 0 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      components:
+        description: 'Comma-separated list of components to aggregate (leave empty for all)'
+        required: false
+        default: ''
+      include_specs:
+        description: 'Include specifications from specs repository'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout docs repository
+        uses: actions/checkout@v3
+        with:
+          path: docs
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd docs
+          npm install
+
+      - name: Determine components to aggregate
+        id: components
+        run: |
+          if [ -z "${{ github.event.inputs.components }}" ]; then
+            echo "components=auth,server,web,mcp-client" >> $GITHUB_OUTPUT
+          else
+            echo "components=${{ github.event.inputs.components }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout specs repository
+        if: ${{ github.event.inputs.include_specs != 'false' }}
+        uses: actions/checkout@v3
+        with:
+          repository: NeuralLog/specs
+          path: specs
+
+      - name: Checkout auth repository
+        if: contains(steps.components.outputs.components, 'auth')
+        uses: actions/checkout@v3
+        with:
+          repository: NeuralLog/auth
+          path: auth
+
+      - name: Checkout server repository
+        if: contains(steps.components.outputs.components, 'server')
+        uses: actions/checkout@v3
+        with:
+          repository: NeuralLog/server
+          path: server
+
+      - name: Checkout web repository
+        if: contains(steps.components.outputs.components, 'web')
+        uses: actions/checkout@v3
+        with:
+          repository: NeuralLog/web
+          path: web
+
+      - name: Checkout mcp-client repository
+        if: contains(steps.components.outputs.components, 'mcp-client')
+        uses: actions/checkout@v3
+        with:
+          repository: NeuralLog/mcp-client
+          path: mcp-client
+
+      - name: Process specifications
+        if: ${{ github.event.inputs.include_specs != 'false' }}
+        run: |
+          mkdir -p docs/docs/architecture
+          mkdir -p docs/docs/deployment
+          mkdir -p docs/docs/security
+          mkdir -p docs/docs/api
+
+          # Core architecture
+          if [ -f specs/01-core-architecture.md ]; then
+            cp specs/01-core-architecture.md docs/docs/architecture/core-architecture.md
+          fi
+
+          # Event-action model
+          if [ -f specs/02-event-action-model.md ]; then
+            cp specs/02-event-action-model.md docs/docs/architecture/event-action-model.md
+          fi
+
+          # Tenant isolation
+          if [ -f specs/03-tenant-isolation.md ]; then
+            cp specs/03-tenant-isolation.md docs/docs/architecture/tenant-isolation.md
+          fi
+
+          # Web interface
+          if [ -f specs/04-web-interface.md ]; then
+            cp specs/04-web-interface.md docs/docs/architecture/web-interface.md
+          fi
+
+          # Security model
+          if [ -f specs/10-security-model.md ]; then
+            cp specs/10-security-model.md docs/docs/security/security-model.md
+          fi
+
+          # Authentication flows
+          if [ -f specs/11-authentication-flows.md ]; then
+            cp specs/11-authentication-flows.md docs/docs/security/authentication-flows.md
+          fi
+
+          # Authorization RBAC
+          if [ -f specs/12-authorization-rbac.md ]; then
+            cp specs/12-authorization-rbac.md docs/docs/security/authorization-rbac.md
+          fi
+
+          # API design
+          if [ -f specs/14-rest-api-design.md ]; then
+            cp specs/14-rest-api-design.md docs/docs/api/rest-api-design.md
+          fi
+
+          if [ -f specs/15-websocket-api.md ]; then
+            cp specs/15-websocket-api.md docs/docs/api/websocket-api.md
+          fi
+
+          if [ -f specs/16-graphql-api.md ]; then
+            cp specs/16-graphql-api.md docs/docs/api/graphql-api.md
+          fi
+
+          # Deployment
+          if [ -f specs/22-kubernetes-deployment.md ]; then
+            cp specs/22-kubernetes-deployment.md docs/docs/deployment/kubernetes-deployment.md
+          fi
+
+          # Redis storage
+          if [ -f specs/26-redis-storage.md ]; then
+            cp specs/26-redis-storage.md docs/docs/architecture/redis-storage.md
+          fi
+
+          # Process specs to create index files
+          node docs/scripts/create-spec-indexes.js
+
+      - name: Aggregate auth documentation
+        if: contains(steps.components.outputs.components, 'auth')
+        run: |
+          mkdir -p docs/docs/components/auth
+
+          # Copy API documentation
+          if [ -f auth/docs/api.md ]; then
+            cp auth/docs/api.md docs/docs/components/auth/api.md
+          fi
+
+          # Copy configuration documentation
+          if [ -f auth/docs/configuration.md ]; then
+            cp auth/docs/configuration.md docs/docs/components/auth/configuration.md
+          fi
+
+          # Copy architecture documentation
+          if [ -f auth/docs/architecture.md ]; then
+            cp auth/docs/architecture.md docs/docs/components/auth/architecture.md
+          fi
+
+          # Copy examples
+          if [ -d auth/docs/examples ]; then
+            mkdir -p docs/docs/components/auth/examples
+            cp -r auth/docs/examples/* docs/docs/components/auth/examples/
+          fi
+
+          # Extract information from README for overview
+          if [ -f auth/README.md ]; then
+            node docs/scripts/extract-readme-info.js auth/README.md docs/docs/components/auth/overview.md "Auth"
+          fi
+
+      - name: Aggregate server documentation
+        if: contains(steps.components.outputs.components, 'server')
+        run: |
+          mkdir -p docs/docs/components/server
+
+          # Copy API documentation
+          if [ -f server/docs/api.md ]; then
+            cp server/docs/api.md docs/docs/components/server/api.md
+          fi
+
+          # Copy configuration documentation
+          if [ -f server/docs/configuration.md ]; then
+            cp server/docs/configuration.md docs/docs/components/server/configuration.md
+          fi
+
+          # Copy architecture documentation
+          if [ -f server/docs/architecture.md ]; then
+            cp server/docs/architecture.md docs/docs/components/server/architecture.md
+          fi
+
+          # Copy storage adapters documentation
+          if [ -f server/docs/storage-adapters.md ]; then
+            cp server/docs/storage-adapters.md docs/docs/components/server/storage-adapters.md
+          fi
+
+          # Copy examples
+          if [ -d server/docs/examples ]; then
+            mkdir -p docs/docs/components/server/examples
+            cp -r server/docs/examples/* docs/docs/components/server/examples/
+          fi
+
+          # Extract information from README for overview
+          if [ -f server/README.md ]; then
+            node docs/scripts/extract-readme-info.js server/README.md docs/docs/components/server/overview.md "Server"
+          fi
+
+      - name: Aggregate web documentation
+        if: contains(steps.components.outputs.components, 'web')
+        run: |
+          mkdir -p docs/docs/components/web
+
+          # Copy API documentation
+          if [ -f web/docs/api.md ]; then
+            cp web/docs/api.md docs/docs/components/web/api.md
+          fi
+
+          # Copy configuration documentation
+          if [ -f web/docs/configuration.md ]; then
+            cp web/docs/configuration.md docs/docs/components/web/configuration.md
+          fi
+
+          # Copy architecture documentation
+          if [ -f web/docs/architecture.md ]; then
+            cp web/docs/architecture.md docs/docs/components/web/architecture.md
+          fi
+
+          # Copy examples
+          if [ -d web/docs/examples ]; then
+            mkdir -p docs/docs/components/web/examples
+            cp -r web/docs/examples/* docs/docs/components/web/examples/
+          fi
+
+          # Extract information from README for overview
+          if [ -f web/README.md ]; then
+            node docs/scripts/extract-readme-info.js web/README.md docs/docs/components/web/overview.md "Web"
+          fi
+
+      - name: Aggregate mcp-client documentation
+        if: contains(steps.components.outputs.components, 'mcp-client')
+        run: |
+          mkdir -p docs/docs/components/mcp-client
+
+          # Copy API documentation
+          if [ -f mcp-client/docs/api.md ]; then
+            cp mcp-client/docs/api.md docs/docs/components/mcp-client/api.md
+          fi
+
+          # Copy configuration documentation
+          if [ -f mcp-client/docs/configuration.md ]; then
+            cp mcp-client/docs/configuration.md docs/docs/components/mcp-client/configuration.md
+          fi
+
+          # Copy architecture documentation
+          if [ -f mcp-client/docs/architecture.md ]; then
+            cp mcp-client/docs/architecture.md docs/docs/components/mcp-client/architecture.md
+          fi
+
+          # Copy examples
+          if [ -d mcp-client/docs/examples ]; then
+            mkdir -p docs/docs/components/mcp-client/examples
+            cp -r mcp-client/docs/examples/* docs/docs/components/mcp-client/examples/
+          fi
+
+          # Extract information from README for overview
+          if [ -f mcp-client/README.md ]; then
+            node docs/scripts/extract-readme-info.js mcp-client/README.md docs/docs/components/mcp-client/overview.md "MCP Client"
+          fi
+
+      - name: Update sidebar configuration
+        run: |
+          node docs/scripts/update-sidebar.js
+
+      - name: Commit changes
+        run: |
+          cd docs
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs
+          git diff --quiet && git diff --staged --quiet || git commit -m "docs: Update documentation from components and specs [skip ci]"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: docs
+          branch: main

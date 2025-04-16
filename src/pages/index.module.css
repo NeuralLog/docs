@@ -1,0 +1,634 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+}
+
+.heroBanner h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-align: left;
+  letter-spacing: -0.5px;
+}
+
+.heroBanner p.hero__subtitle {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-weight: 700;
+  color: #52C41A;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #52C41A, #1677FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroTagline {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  max-width: 540px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heroGraphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.heroGraphic img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.heroGraphic img:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+
+  .heroBanner h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .heroBanner p.hero__subtitle {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .heroTagline {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroGraphic {
+    margin-top: 3rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.buttonContainer a {
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttonContainer a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 996px) {
+  .buttons {
+    justify-content: center;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featureSection {
+  padding: 5rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.featureCard {
+  padding: 2rem;
+  height: 100%;
+  background-color: var(--ifm-color-emphasis-0);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.featureCard h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+  flex-grow: 1;
+}
+
+.featureIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.featureLink {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.featureLink:hover {
+  text-decoration: underline;
+}
+
+.securitySection {
+  padding: 6rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.mcpSection {
+  padding: 6rem 0;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+.ctaSection {
+  padding: 5rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  color: white;
+}
+
+.ctaContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+}
+
+.ctaHighlights {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.ctaHighlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaHighlightNumber {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #52C41A;
+  margin-bottom: 0.5rem;
+}
+
+.ctaHighlightText {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .ctaHighlights {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.integrationSection {
+  padding: 5rem 0;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+.integrationContent {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.integrationTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.integrationDescription {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.integrationList {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.integrationList li {
+  margin-bottom: 1rem;
+}
+
+.integrationButtons {
+  margin-top: 1rem;
+}
+
+.codeCard {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background-color: #1E1E3F;
+  margin: 1rem 0;
+}
+
+.codeHeader {
+  padding: 1rem;
+  background-color: #2D2B55;
+  display: flex;
+  align-items: center;
+}
+
+.codeDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.codeDot:nth-child(1) {
+  background-color: #FF5F56;
+}
+
+.codeDot:nth-child(2) {
+  background-color: #FFBD2E;
+}
+
+.codeDot:nth-child(3) {
+  background-color: #27C93F;
+}
+
+.codeHeader span {
+  margin-left: 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+}
+
+.securityContent, .mcpContent {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.securityTitle, .mcpTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.securityTitle span {
+  color: #FF4D4F;
+  font-weight: 800;
+}
+
+.mcpTitle span {
+  color: #52C41A;
+  font-weight: 800;
+}
+
+.securityDescription, .mcpDescription {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.securityFeatures, .mcpFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.securityFeature, .mcpFeature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.securityFeature h3, .mcpFeature h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.securityFeature p, .mcpFeature p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.securityFeatureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(22, 119, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.mcpFeatureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(82, 196, 26, 0.1);
+  flex-shrink: 0;
+}
+
+.securityButtons, .mcpButtons {
+  margin-top: 2rem;
+}
+
+.securityImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.securityImage img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.securityImage img:hover {
+  transform: translateY(-5px);
+}
+
+/* MCP Chat Styling */
+.mcpConversation {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  background-color: #F0F2F5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  margin: 1rem;
+}
+
+.mcpConversation:hover {
+  transform: translateY(-5px);
+}
+
+.mcpChatHeader {
+  padding: 1rem;
+  background-color: #2F54EB;
+  display: flex;
+  align-items: center;
+}
+
+.mcpChatDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.mcpChatDot:nth-child(1) {
+  background-color: #FF5F56;
+}
+
+.mcpChatDot:nth-child(2) {
+  background-color: #FFBD2E;
+}
+
+.mcpChatDot:nth-child(3) {
+  background-color: #27C93F;
+}
+
+.mcpChatHeader span {
+  margin-left: 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mcpChatBody {
+  padding: 1rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #E6E6E6;
+}
+
+.mcpChatMessage {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.mcpChatAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mcpChatContent {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 85%;
+  color: #333333;
+}
+
+.mcpChatContent p {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+}
+
+.mcpChatContent p:last-child {
+  margin-bottom: 0;
+}
+
+.mcpChatContent ul {
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.mcpChatContent li {
+  margin-bottom: 0.5rem;
+}
+
+.mcpChatUser .mcpChatAvatar {
+  background-color: #52C41A;
+  color: white;
+}
+
+.mcpChatUser .mcpChatContent {
+  background-color: #FFFFFF;
+  border-left: 4px solid #52C41A;
+}
+
+.mcpChatAssistant .mcpChatAvatar {
+  background-color: #1677FF;
+  color: white;
+}
+
+.mcpChatAssistant .mcpChatContent {
+  background-color: #E6F7FF;
+  border-left: 4px solid #1677FF;
+}
+
+.mcpChatCode {
+  background-color: #1E1E3F;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mcpChatCodeHeader {
+  background-color: #2D2B55;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+.mcpChatCode pre {
+  margin: 0;
+  padding: 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .securityContent, .mcpContent {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .securityTitle, .mcpTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .securityDescription, .mcpDescription {
+    text-align: center;
+  }
+
+  .securityFeature, .mcpFeature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .securityButtons, .mcpButtons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .securityImage {
+    margin-bottom: 2rem;
+  }
+
+  .mcpConversation {
+    margin-top: 2rem;
+    max-height: 600px;
+  }
+
+  .mcpSection .row {
+    flex-direction: column-reverse;
+  }
+}

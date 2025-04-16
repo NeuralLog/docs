@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>MCP Integration</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#52C41A" offset="0%"></stop>
+            <stop stop-color="#1677FF" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" id="filter-glow">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="800" height="600"></rect>
+        
+        <!-- Background Grid -->
+        <g stroke="#F0F0F0" stroke-width="1">
+            <path d="M0,50 L800,50"></path>
+            <path d="M0,100 L800,100"></path>
+            <path d="M0,150 L800,150"></path>
+            <path d="M0,200 L800,200"></path>
+            <path d="M0,250 L800,250"></path>
+            <path d="M0,300 L800,300"></path>
+            <path d="M0,350 L800,350"></path>
+            <path d="M0,400 L800,400"></path>
+            <path d="M0,450 L800,450"></path>
+            <path d="M0,500 L800,500"></path>
+            <path d="M0,550 L800,550"></path>
+            
+            <path d="M50,0 L50,600"></path>
+            <path d="M100,0 L100,600"></path>
+            <path d="M150,0 L150,600"></path>
+            <path d="M200,0 L200,600"></path>
+            <path d="M250,0 L250,600"></path>
+            <path d="M300,0 L300,600"></path>
+            <path d="M350,0 L350,600"></path>
+            <path d="M400,0 L400,600"></path>
+            <path d="M450,0 L450,600"></path>
+            <path d="M500,0 L500,600"></path>
+            <path d="M550,0 L550,600"></path>
+            <path d="M600,0 L600,600"></path>
+            <path d="M650,0 L650,600"></path>
+            <path d="M700,0 L700,600"></path>
+            <path d="M750,0 L750,600"></path>
+        </g>
+        
+        <!-- Client Application -->
+        <g transform="translate(100, 100)">
+            <rect fill="#F6FFED" x="0" y="0" width="150" height="100" rx="8"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#52C41A">
+                <tspan x="25" y="40">Client</tspan>
+                <tspan x="25" y="60">Application</tspan>
+            </text>
+            <rect fill="#52C41A" x="0" y="0" width="150" height="20" rx="8"></rect>
+            <circle cx="10" cy="10" r="5" fill="#FFFFFF"></circle>
+        </g>
+        
+        <!-- NeuralLog SDK -->
+        <g transform="translate(100, 250)">
+            <rect fill="#E6F7FF" x="0" y="0" width="150" height="100" rx="8"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#1677FF">
+                <tspan x="25" y="40">NeuralLog</tspan>
+                <tspan x="25" y="60">SDK</tspan>
+            </text>
+            <rect fill="#1677FF" x="0" y="0" width="150" height="20" rx="8"></rect>
+            <circle cx="10" cy="10" r="5" fill="#FFFFFF"></circle>
+        </g>
+        
+        <!-- NeuralLog Server -->
+        <g transform="translate(100, 400)">
+            <rect fill="#F9F0FF" x="0" y="0" width="150" height="100" rx="8"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#722ED1">
+                <tspan x="25" y="40">NeuralLog</tspan>
+                <tspan x="25" y="60">Server</tspan>
+            </text>
+            <rect fill="#722ED1" x="0" y="0" width="150" height="20" rx="8"></rect>
+            <circle cx="10" cy="10" r="5" fill="#FFFFFF"></circle>
+        </g>
+        
+        <!-- AI Agent -->
+        <g transform="translate(550, 250)">
+            <rect fill="#FFF7E6" x="0" y="0" width="150" height="100" rx="8"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#FA8C16">
+                <tspan x="45" y="50">AI Agent</tspan>
+            </text>
+            <rect fill="#FA8C16" x="0" y="0" width="150" height="20" rx="8"></rect>
+            <circle cx="10" cy="10" r="5" fill="#FFFFFF"></circle>
+        </g>
+        
+        <!-- MCP Server -->
+        <g transform="translate(325, 250)">
+            <rect fill="#F0F5FF" x="0" y="0" width="150" height="100" rx="8" stroke="url(#linearGradient-1)" stroke-width="3"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#2F54EB">
+                <tspan x="35" y="40">Model</tspan>
+                <tspan x="35" y="60">Context</tspan>
+                <tspan x="35" y="80">Protocol</tspan>
+            </text>
+            <rect fill="url(#linearGradient-1)" x="0" y="0" width="150" height="20" rx="8"></rect>
+            <circle cx="10" cy="10" r="5" fill="#FFFFFF"></circle>
+        </g>
+        
+        <!-- Connection Lines -->
+        <g stroke-width="2" stroke-dasharray="5,5">
+            <!-- Client to SDK -->
+            <path d="M175,200 L175,250" stroke="#52C41A"></path>
+            
+            <!-- SDK to Server -->
+            <path d="M175,350 L175,400" stroke="#1677FF"></path>
+            
+            <!-- SDK to MCP -->
+            <path d="M250,300 L325,300" stroke="url(#linearGradient-1)"></path>
+            
+            <!-- MCP to AI Agent -->
+            <path d="M475,300 L550,300" stroke="#2F54EB"></path>
+        </g>
+        
+        <!-- Data Flow Indicators -->
+        <g filter="url(#filter-glow)">
+            <!-- Encrypted Data -->
+            <circle cx="175" cy="225" r="8" fill="#52C41A" opacity="0.8"></circle>
+            <circle cx="175" cy="375" r="8" fill="#1677FF" opacity="0.8"></circle>
+            
+            <!-- MCP Data -->
+            <circle cx="290" cy="300" r="8" fill="#2F54EB" opacity="0.8"></circle>
+            <circle cx="510" cy="300" r="8" fill="#FA8C16" opacity="0.8"></circle>
+        </g>
+        
+        <!-- Labels -->
+        <g font-family="Arial, sans-serif" font-size="12" fill="#666666">
+            <text x="180" y="225">Encrypted Logs</text>
+            <text x="180" y="375">Secure Storage</text>
+            <text x="400" y="280">MCP Interface</text>
+            <text x="480" y="280">AI Analysis</text>
+        </g>
+        
+        <!-- Title -->
+        <text font-family="Arial-BoldMT, Arial" font-size="24" font-weight="bold" fill="#2F54EB" text-anchor="middle">
+            <tspan x="400" y="50">Model Context Protocol Integration</tspan>
+        </text>
+    </g>
+</svg>

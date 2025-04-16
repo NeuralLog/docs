@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Zero Knowledge Security</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(40, 40)">
+            <path d="M60,0 C93.137,0 120,26.863 120,60 C120,93.137 93.137,120 60,120 C26.863,120 0,93.137 0,60 C0,26.863 26.863,0 60,0 Z" fill="#E6F7FF" fill-rule="nonzero"></path>
+            <path d="M60,20 C71.046,20 80,28.954 80,40 L80,50 L85,50 C87.761,50 90,52.239 90,55 L90,95 C90,97.761 87.761,100 85,100 L35,100 C32.239,100 30,97.761 30,95 L30,55 C30,52.239 32.239,50 35,50 L40,50 L40,40 C40,28.954 48.954,20 60,20 Z M60,30 C54.477,30 50,34.477 50,40 L50,50 L70,50 L70,40 C70,34.477 65.523,30 60,30 Z" fill="#1677FF" fill-rule="nonzero"></path>
+            <circle fill="#FFFFFF" cx="60" cy="75" r="10"></circle>
+            <path d="M60,65 C65.523,65 70,69.477 70,75 C70,80.523 65.523,85 60,85 C54.477,85 50,80.523 50,75 C50,69.477 54.477,65 60,65 Z M60,70 C57.239,70 55,72.239 55,75 C55,77.761 57.239,80 60,80 C62.761,80 65,77.761 65,75 C65,72.239 62.761,70 60,70 Z" fill="#1677FF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Early Warning Signals</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#FFF7E6" cx="60" cy="60" r="60"/>
+        <g transform="translate(20, 20)">
+            <!-- Dashboard -->
+            <rect x="0" y="0" width="80" height="60" rx="4" fill="#FFFFFF" stroke="#FA8C16" stroke-width="2"/>
+            <rect x="0" y="0" width="80" height="15" rx="4" fill="#FA8C16"/>
+            <circle cx="7.5" cy="7.5" r="2.5" fill="#FFFFFF"/>
+            <circle cx="15" cy="7.5" r="2.5" fill="#FFFFFF"/>
+            <circle cx="22.5" cy="7.5" r="2.5" fill="#FFFFFF"/>
+            
+            <!-- Graph -->
+            <polyline points="10,45 20,40 30,42 40,30 50,35 60,25 70,15" stroke="#FA8C16" stroke-width="2" fill="none"/>
+            
+            <!-- Alert -->
+            <circle cx="40" cy="30" r="5" fill="#FA8C16"/>
+            <circle cx="60" cy="25" r="5" fill="#FA8C16"/>
+            
+            <!-- Warning Icon -->
+            <path d="M40,65 C41.105,65 42.105,65.595 42.658,66.552 L42.658,66.552 L55,85 C55.552,85.957 55.552,87.043 55,88 C54.447,88.957 53.447,89.552 52.342,89.552 L52.342,89.552 L27.658,89.552 C26.553,89.552 25.553,88.957 25,88 C24.448,87.043 24.448,85.957 25,85 L25,85 L37.342,66.552 C37.895,65.595 38.895,65 40,65 Z" fill="#FA8C16"/>
+            <rect x="38" y="72" width="4" height="10" rx="2" fill="#FFFFFF"/>
+            <circle fill="#FFFFFF" cx="40" cy="85" r="2"/>
+        </g>
+    </g>
+</svg>
