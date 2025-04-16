@@ -37,18 +37,51 @@ NeuralLog provides robust authentication and authorization mechanisms:
 
 ## Documentation
 
-### [Authentication Implementation](./authentication-implementation.md)
+### Zero-Knowledge Architecture
 
-Detailed guide on implementing authentication in the NeuralLog ecosystem, including token exchange, verification, and best practices.
+#### [Zero-Knowledge Architecture Overview](./zero-knowledge-architecture.md)
+Concise explanation of NeuralLog's zero-knowledge approach, including the encryption processes, key derivation, and security guarantees.
 
-### [Zero-Knowledge Architecture](./zero-knowledge-architecture.md)
+#### [Comprehensive Zero-Knowledge Architecture](./zero-knowledge-architecture-comprehensive.md)
+In-depth exploration of NeuralLog's zero-knowledge architecture, including detailed implementation aspects and security properties.
 
-In-depth explanation of NeuralLog's zero-knowledge approach, including the encryption processes, key derivation, and security guarantees.
+### Key Management
 
-### [Key Management](./key-management.md)
-
+#### [Key Management Overview](./key-management.md)
 Comprehensive documentation on NeuralLog's key hierarchy, key rotation procedures, and disaster recovery options.
 
-### [TypeScript Client SDK: The Cornerstone of Zero-Knowledge Security](../architecture/typescript-client-sdk-cornerstone.md)
+#### [KEK Management](./kek-management.md)
+Detailed explanation of the Key Encryption Key (KEK) management system, including versioning, provisioning, and security considerations.
 
+#### [KEK and Encryption Policies](../architecture/kek-encryption-policies.md)
+Comprehensive overview of NeuralLog's Key Encryption Key (KEK) system and encryption policies that ensure data security and privacy throughout the platform.
+
+### Data Protection
+
+#### [Encrypted Data at Rest](./encrypted-data-at-rest.md)
+Explanation of how NeuralLog ensures data remains encrypted at rest, including storage mechanisms and encryption algorithms.
+
+#### [Encrypted Log Names](./encrypted-log-names.md)
+Details on how log names are encrypted to protect metadata and ensure complete privacy.
+
+#### [Searchable Encryption](./searchable-encryption.md)
+Explanation of NeuralLog's approach to searchable encryption, enabling search capabilities without compromising security.
+
+### Access Control
+
+#### [RBAC Implementation](./rbac-implementation.md)
+Detailed guide on NeuralLog's Role-Based Access Control implementation, including permission models and enforcement mechanisms.
+
+#### [Tenant Isolation and RBAC](./tenant-isolation-rbac.md)
+Explanation of how NeuralLog ensures complete isolation between tenants while implementing robust access controls.
+
+#### [Comprehensive Authentication and Authorization Guide](./comprehensive-auth-guide.md)
+Detailed overview of NeuralLog's authentication and authorization system, including architecture, implementation details, best practices, and integration patterns.
+
+#### [Authentication Implementation](./authentication-implementation.md)
+Practical guide on implementing authentication in the NeuralLog ecosystem, including token exchange, verification, and best practices.
+
+### Client-Side Security
+
+#### [TypeScript Client SDK: The Cornerstone of Zero-Knowledge Security](../architecture/typescript-client-sdk-cornerstone.md)
 Exploration of how the TypeScript Client SDK implements the zero-knowledge architecture, ensuring that sensitive data never leaves the client unencrypted.

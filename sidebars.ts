@@ -28,6 +28,8 @@ const sidebars: SidebarsConfig = {
       label: 'Architecture',
       items: [
         'architecture/index',
+        'architecture/kek-encryption-policies',
+        'architecture/client-sdk-architecture',
         'architecture/tenant-registry',
         'architecture/typescript-client-sdk-cornerstone',
       ]
@@ -70,6 +72,7 @@ const sidebars: SidebarsConfig = {
             'components/log-server/configuration',
             'components/log-server/architecture',
             'components/log-server/storage-adapters',
+            'components/log-server/data-retention',
             'components/log-server/zero-knowledge',
           ]
         },
@@ -79,6 +82,7 @@ const sidebars: SidebarsConfig = {
           items: [
             'components/client-sdks/overview',
             'components/client-sdks/typescript',
+            'components/client-sdks/comprehensive-usage-guide',
           ]
         },
         {
@@ -134,9 +138,17 @@ const sidebars: SidebarsConfig = {
       label: 'Security',
       items: [
         'security/index',
-        'security/authentication-implementation',
         'security/zero-knowledge-architecture',
+        'security/zero-knowledge-architecture-comprehensive',
+        'security/comprehensive-auth-guide',
+        'security/authentication-implementation',
         'security/key-management',
+        'security/kek-management',
+        'security/encrypted-data-at-rest',
+        'security/encrypted-log-names',
+        'security/searchable-encryption',
+        'security/rbac-implementation',
+        'security/tenant-isolation-rbac',
       ]
     },
     {

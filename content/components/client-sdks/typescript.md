@@ -360,5 +360,7 @@ For a complete API reference, see the TypeScript SDK API Reference in the reposi
 
 ## Next Steps
 
+- [Comprehensive Client SDK Usage Guide](./comprehensive-usage-guide.md)
 - [Logger Adapters](../logger-adapters/overview.md)
 - [Security Architecture](../../security/zero-knowledge-architecture.md)
+- [Authentication and Authorization Guide](../../security/comprehensive-auth-guide.md)

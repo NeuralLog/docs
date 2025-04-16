@@ -27,7 +27,7 @@ The TypeScript SDK is the cornerstone of NeuralLog's client libraries and serves
 - **Repository**: [NeuralLog/typescript-client-sdk](https://github.com/NeuralLog/typescript-client-sdk)
 - **Package**: `@neurallog/client-sdk`
 - **Platforms**: Node.js, Browser
-- **Key Features**: 
+- **Key Features**:
   - Complete implementation of the zero-knowledge architecture
   - Comprehensive key management
   - Support for both Node.js and browser environments
@@ -181,9 +181,11 @@ When using NeuralLog SDKs, keep these security considerations in mind:
 ## Next Steps
 
 - [TypeScript SDK Documentation](./typescript.md)
+- [Comprehensive Client SDK Usage Guide](./comprehensive-usage-guide.md)
 - [Java SDK Documentation](./java.md)
 - [C# SDK Documentation](./csharp.md)
 - [Python SDK Documentation](./python.md)
 - [Go SDK Documentation](./go.md)
 - [Logger Adapters](../logger-adapters/overview.md)
 - [Security Architecture](../../security/zero-knowledge-architecture.md)
+- [Authentication and Authorization Guide](../../security/comprehensive-auth-guide.md)

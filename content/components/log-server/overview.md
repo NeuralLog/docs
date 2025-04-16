@@ -19,6 +19,7 @@ NeuralLog is an intelligent logging system with automated action capabilities. I
 - Persistent storage with Docker volumes
 - Comprehensive search capabilities
 - Statistics tracking and reporting
+- Configurable data retention policies
 - Integration with MCP clients
 - Multi-tenant support through namespaces
 - Kubernetes deployment support
@@ -34,6 +35,7 @@ For detailed documentation, see:
 - [API Reference](./api.md)
 - [Configuration](./configuration.md)
 - [Architecture](./architecture.md)
+- [Data Retention](./data-retention.md)
 - [Examples](./examples)
 
 For the source code and component-specific documentation, visit the [NeuralLog log-server Repository](https://github.com/NeuralLog/log-server).
